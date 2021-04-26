@@ -3,18 +3,20 @@ import './estilo.css';
 
 class FormularioCadastro extends Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.titulo ='';
 		this.texto = '';
 	}
 
 	_handleMudancaTitulo(evento) {
 		evento.stopPropagation();
+		evento.stopPropagation();
 		this.titulo = evento.target.value;
 	}
 
 	_handleMudancaTexto(evento) {
+		evento.stopPropagation();
 		evento.stopPropagation();
 		this.texto = evento.target.value;
 	}
@@ -22,7 +24,7 @@ class FormularioCadastro extends Component {
 	_criarNota(evento) {
 		evento.preventDefault();
 		evento.stopPropagation();
-		console.log(evento);
+		this.props.criarNota(this.titulo, this.texto);
 	}
 
 	render() {
