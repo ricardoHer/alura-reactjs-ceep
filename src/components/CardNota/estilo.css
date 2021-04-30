@@ -14,10 +14,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .card-nota_titulo {
     font-size: 1.2em;
     margin-right: 12px;
+}
+.card-nota_excluir {
+    cursor: pointer;   
 }
 .card-nota_texto {
     margin-top: 8px;
